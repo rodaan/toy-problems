@@ -13,21 +13,6 @@
   */
 
 var allAnagrams = function(string) {
-  // create result array
-  var result = [];
-  // create inner function which determines the results
-  var createAnagram = function(stringLeft, anagramSoFar){
-	  if(stringLeft === ''){
-      result.push(anagramSoFar);
-	  }
-	  // iterate over length of string
-	  for(var i = 0; i < stringLeft.length; i++){
-	    // add selected character to StringSoFar
-	    createAnagram(stringLeft.slice(0, i) + stringLeft.slice(i + 1), anagramSoFar + stringLeft[i]);
-	  }
-  }
-  createAnagram(string, '');
-  return result;
 };
 
 var anagrams = allAnagrams('abc');
